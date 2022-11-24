@@ -56,5 +56,6 @@ public class App {
         logger.info(String.valueOf((System.currentTimeMillis()-start)/1000)+"s");
         //Closing all elements of connection
         myInstance.close();
+        connectionToDB.close();
     }
 }
