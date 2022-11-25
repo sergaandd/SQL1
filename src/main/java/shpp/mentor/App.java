@@ -5,10 +5,7 @@ import org.slf4j.LoggerFactory;
 import java.io.*;
 import java.sql.*;
 import java.sql.Connection;
-import java.time.LocalDateTime;
-import java.util.Date;
 import java.util.Properties;
-import java.util.Timer;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class App {
