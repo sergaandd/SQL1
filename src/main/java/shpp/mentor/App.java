@@ -20,7 +20,7 @@ public class App {
                 myProp.getProperty("userName"),
                 myProp.getProperty("password"));
         String result = new RunSQLScript(connectionToDB).startScript("src/main/resources/DBCreateScript.sql");
-        connectionToDB.commit();
+        //connectionToDB.commit();
         connectionToDB.setAutoCommit(true);
         //Create statement
         Statement myInstance = connectionToDB.createStatement();
