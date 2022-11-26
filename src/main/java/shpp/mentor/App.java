@@ -19,7 +19,7 @@ public class App {
                 myProp.getProperty("URL"),
                 myProp.getProperty("userName"),
                 myProp.getProperty("password"));
-        String result = new RunSQLScript(connectionToDB).startScript("src/main/resources/DBCreateScript.sql");
+        String result = new RunSQLScript(connectionToDB).startScript("DBCreateScript.sql");
         //connectionToDB.commit();
         connectionToDB.setAutoCommit(true);
         //Create statement
@@ -47,7 +47,7 @@ public class App {
 
         String consoleType=System.getProperty("type")==null?"Drinks":System.getProperty("type");
         String total = new RunSQLScript(connectionToDB).startScriptResult(myInstance
-                , "src/main/resources/MainQuery.sql",consoleType);
+                , "MainQuery.sql",consoleType);
         logger.info("Final select is {}", total);
 
         logger.info(String.valueOf((System.currentTimeMillis()-start)/1000)+"s");

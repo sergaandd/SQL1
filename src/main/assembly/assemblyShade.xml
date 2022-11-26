@@ -22,5 +22,13 @@
             <source>myProp.properties</source>
             <outputDirectory>/</outputDirectory>
         </file>
+        <file>
+            <source>DBCreateScript.sql</source>
+            <outputDirectory>/</outputDirectory>
+        </file>
+        <file>
+            <source>MainQuery.sql</source>
+            <outputDirectory>/</outputDirectory>
+        </file>
     </files>
 </assembly>
