@@ -1,7 +1,7 @@
+drop table if exists store_lot;
 drop table if exists goods;
 drop table if exists types;
 drop table if exists stores;
-drop table if exists store_lot;
 create table if not exists types (
     type_id serial unique not null primary key,
     type_name character(25) unique not null
@@ -11,6 +11,8 @@ create table if not exists goods (
     type_id int,
     goods_name character(40) unique not null
 );
+create index goods_type_id_index
+    on goods (type_id);
 create table if not exists stores (
     store_id serial not null primary key,
     store_name character(25) unique not null ,
