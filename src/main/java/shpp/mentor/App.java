@@ -44,6 +44,7 @@ public class App {
                 Integer.parseInt(myProp.getProperty("qtyGoods")),
                 Integer.parseInt(myProp.getProperty("qty")));
         logger.info("We send in table STORE_LOTS {}", resultSession, " records.");
+        result = new RunSQLScript(connectionToDB).startScript("AddFK.sql");
         Long start = System.currentTimeMillis();
         String consoleType=System.getProperty("type")==null?"Drinks":System.getProperty("type");
         String total = new RunSQLScript(connectionToDB).startScriptResult(myInstance
