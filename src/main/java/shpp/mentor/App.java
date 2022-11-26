@@ -12,7 +12,7 @@ public class App {
     public static final Logger logger = LoggerFactory.getLogger(App.class);
 
     public static void main(String[] args) throws SQLException, IOException {
-        Long start = System.currentTimeMillis();
+
         Properties myProp = PropertyFileOpen.openPropertyFile();//Open property file
         //Create connection to database
         Connection connectionToDB = DriverManager.getConnection(
@@ -44,7 +44,7 @@ public class App {
                 Integer.parseInt(myProp.getProperty("qtyGoods")),
                 Integer.parseInt(myProp.getProperty("qty")));
         logger.info("We send in table STORE_LOTS {}", resultSession, " records.");
-
+        Long start = System.currentTimeMillis();
         String consoleType=System.getProperty("type")==null?"Drinks":System.getProperty("type");
         String total = new RunSQLScript(connectionToDB).startScriptResult(myInstance
                 , "MainQuery.sql",consoleType);
