@@ -35,7 +35,7 @@ class RunSQLScriptTest {
     void startScriptResult() throws SQLException, FileNotFoundException {
         Statement myInstance = connectionToDB.createStatement();
         String actual = new RunSQLScript(connectionToDB).startScriptResult(myInstance
-                , "MainQuery.sql","Drinks");
+                , "MainQuery.sql","Drink");
         String expected = "No data found";
         Assertions.assertEquals(actual, expected);
     }

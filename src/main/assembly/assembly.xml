@@ -30,6 +30,10 @@
             <source>MainQuery.sql</source>
             <outputDirectory>/</outputDirectory>
         </file>
+        <file>
+            <source>AddFK.sql</source>
+            <outputDirectory>/</outputDirectory>
+        </file>
     </files>
     <dependencySets>
         <dependencySet>
