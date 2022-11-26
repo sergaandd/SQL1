@@ -26,7 +26,8 @@ public class RunSQLScript {
             sr.runScript(reader);
             result = "Sql done";
         } catch (FileNotFoundException e) {
-            result = "File not found!";
+
+            result = "File not found! "+e.getMessage();
         }
         return result;
     }
@@ -46,7 +47,7 @@ public class RunSQLScript {
                             " -> " + select.getString("store_name").trim();
                 }
         } catch (FileNotFoundException e) {
-                result="File not found.";
+                result="File not found."+e.getMessage();
         } catch (IOException | SQLException e) {
             throw new RuntimeException(e);
         }
