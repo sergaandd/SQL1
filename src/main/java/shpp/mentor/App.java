@@ -50,7 +50,7 @@ public class App {
                 , "MainQuery.sql",consoleType);
         logger.info("Final select is {}", total);
 
-        logger.info(String.valueOf((System.currentTimeMillis()-start)/1000)+"s");
+        logger.info(String.valueOf(System.currentTimeMillis()-start)+"ms");
         //Closing all elements of connection
         myInstance.close();
         connectionToDB.close();
